@@ -36,7 +36,7 @@ function AddExpenseForm(){
 
         try{
           await axios.post(EXPENSE_REQUEST_BASE_URL, expense);
-          navigate("/")
+          navigate("/");
         }
         catch(e){
            console.log(e);
