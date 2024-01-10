@@ -13,7 +13,7 @@ export function SummaryTable({summaryData}) {
 
   //Calculate total
   const totalSum  = summaryData.reduce((sum, value) => sum + value.total_amount, 0);
-  const finalData =  [...summaryData, {category: "Total", total_amount: totalSum, average_expense: (totalSum/6)}]
+  const finalData =  [...summaryData, {category: "Total", total_amount: totalSum, average_expense: (totalSum/summaryData.length)}]
 
   return (
     <Card className="h-fit rounded-none p-0 m-0">
